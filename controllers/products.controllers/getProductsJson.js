@@ -87,7 +87,7 @@ async function updateProductJson(productId, obj) {
 				product.thumbnail = thumbnail;
 				product.code = code;
 				product.stock = Number(stock);
-				product.status = status ? Boolean(status) : true;
+				product.status = status;
 				product.category = category;
 			}
 			return product
