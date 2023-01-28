@@ -1,19 +1,22 @@
-const {addCartJson} = require("./getCartsJson");
+const {
+  addCartJson
+} = require("./getCartsJson");
 
-async function addCart (req, res) {
-    try  {
-      
-      let p1 = {...req.body}
-     
-    
-      const carts = await addCartJson(p1);
-        
-      return res.send(carts)
+async function addCart(req, res) {
+  try {
+
+    let p1 = {
+      ...req.body
     }
-      catch(error) {
-        error
-      }
-    
+
+
+    const carts = await addCartJson(p1);
+
+    return res.send(carts)
+  } catch (error) {
+    error
   }
 
-  module.exports = addCart;
+}
+
+module.exports = addCart;
